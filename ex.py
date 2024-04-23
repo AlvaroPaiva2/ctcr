@@ -175,34 +175,73 @@
 #     print('Negativo')
 
 # Exercicios de Python 16 - muito parecido com um anterior
-print('=== folha de pagamento ===')
-#requisições de input
-salarioHora = float(input('Quanto você ganha por hora? '))
-horasTrabalhadas = float(input('Quantas horas você trabalhou esse mês? '))
-#calculos
-salarioBruto = salarioHora * horasTrabalhadas
-impostoRenda = 0
-if salarioBruto <= 900:
-        impostoRenda = str('Isento de imposto de renda')
-elif salarioBruto > 900 and salarioBruto <= 1500:
-        impostoRenda = salarioBruto * 0.05
-elif salarioBruto > 1500 and salarioBruto <= 2500:
-        impostoRenda = salarioBruto * 0.10
+# print('=== folha de pagamento ===')
+# #requisições de input
+# salarioHora = float(input('Quanto você ganha por hora? '))
+# horasTrabalhadas = float(input('Quantas horas você trabalhou esse mês? '))
+# #calculos
+# salarioBruto = salarioHora * horasTrabalhadas
+# impostoRenda = 0
+# if salarioBruto <= 900:
+#         impostoRenda = str('Isento de imposto de renda')
+# elif salarioBruto > 900 and salarioBruto <= 1500:
+#         impostoRenda = salarioBruto * 0.05
+# elif salarioBruto > 1500 and salarioBruto <= 2500:
+#         impostoRenda = salarioBruto * 0.10
+# else:
+#         impostoRenda = salarioBruto * 0.20
+# fgts = salarioBruto * 0.11
+# inss = salarioBruto * 0.10
+# salarioLiquido = salarioBruto - inss + fgts
+# if impostoRenda == 'Isento de imposto de renda':
+#     salarioLiquido = salarioBruto - inss + fgts
+# else:
+#     salarioLiquido = salarioBruto - impostoRenda - inss + fgts
+# #imprime os valores
+# print(f'\n + Salário Bruto: {str(salarioBruto)} '
+#       f'\n + FGTS (11%): {str(fgts)} '
+#       f'\n - IR (5%, 10% ou 20%): {str(impostoRenda)} '
+#       f'\n - INSS (10%): {str(inss)} '
+#       f'\n = Salário Líquido: {str(salarioLiquido)}')
+
+# Exercicios de Python 17
+# print('=== maior e menor numero ===')
+# num1 = float(input('Digite um número: '))
+# num2 = float(input('Digite outro número: '))
+# num3 = float(input('Digite outro número: '))
+# if num1 > num2 and num1 > num3 and num2 > num3:
+#     print(f'{num1} é o maior número e {num3} é o menor número.')
+# elif num1 > num2 and num1 > num3 and num3 > num2:
+#     print(f'{num1} é o maior número e {num2} é o menor número.')
+# elif num2 > num1 and num2 > num3 and num1 > num3:
+#     print(f'{num2} é o maior número e {num3} é o menor número.')
+# elif num2 > num1 and num2 > num3 and num3 > num1:
+#     print(f'{num2} é o maior número e {num1} é o menor número.')
+# elif num3 > num1 and num3 > num2 and num1 > num2:
+#     print(f'{num3} é o maior número e {num2} é o menor número.')
+# elif num3 > num1 and num3 > num2 and num2 > num1:
+#     print(f'{num3} é o maior número e {num1} é o menor número.')
+# else:
+#     print('Os números são iguais.')
+
+# Exercicios de Python 18
+print('===  ===')
+def obter_numero():
+    while True:
+        numero = float(input('Digite um número: '))
+        if numero > 0:
+            return numero
+        else:
+            print('Por favor, digite um número maior que 0.')
+numero1 = obter_numero()
+numero2 = obter_numero()
+numero3 = obter_numero()
+if numero1 > numero2 and numero1 > numero3:
+    print(f'{numero1} é o maior número.')
+elif numero2 > numero1 and numero2 > numero3:
+    print(f'{numero2} é o maior número.')
 else:
-        impostoRenda = salarioBruto * 0.20
-fgts = salarioBruto * 0.11
-inss = salarioBruto * 0.10
-salarioLiquido = salarioBruto - inss + fgts
-if impostoRenda == 'Isento de imposto de renda':
-    salarioLiquido = salarioBruto - inss + fgts
-else:
-    salarioLiquido = salarioBruto - impostoRenda - inss + fgts
-#imprime os valores
-print(f'\n + Salário Bruto: {str(salarioBruto)} '
-      f'\n + FGTS (11%): {str(fgts)} '
-      f'\n - IR (5%, 10% ou 20%): {str(impostoRenda)} '
-      f'\n - INSS (10%): {str(inss)} '
-      f'\n = Salário Líquido: {str(salarioLiquido)}')
+    print(f'{numero3} é o maior número.')
 
 
 
