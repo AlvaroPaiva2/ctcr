@@ -91,17 +91,142 @@
 #     print('Gênero inválido.')
 
 # Exercicios de Python 10
-print('=== Calculadora de valores ===')
-excesso = print('Excesso de peso: o que passa de 50kg')
-multa = print('Multa: R$ 4,00 por kg excedente')
-peso = float(input('Digite o peso dos peixes em kg: '))
-if peso > 50:
-        excesso = peso - 50
-        multa = excesso * 4
-        print(f'Excesso de peso: {excesso:.2f} kg')
-        print(f'Multa: R$ {multa:.2f}')
+# print('=== Calculadora de valores ===')
+# excesso = print('Excesso de peso: o que passa de 50kg')
+# multa = print('Multa: R$ 4,00 por kg excedente')
+# peso = float(input('Digite o peso dos peixes em kg: '))
+# if peso > 50:
+#         excesso = peso - 50
+#         multa = excesso * 4
+#         print(f'Excesso de peso: {excesso:.2f} kg')
+#         print(f'Multa: R$ {multa:.2f}')
+# else:
+#         print('Peso dentro do limite permitido.')
+
+# Exercicios de Python 11
+# coleta informações do usuário
+# print('=== Gasto mensal do funcionario ===')
+# salarioPorHora = float(input('Quanto você ganha por hora? '))
+# horasTrabalhadasPorMes = float(input('Quantas horas você trabalhou esse mês? '))
+# # calcula o salário bruto, imposto de renda, INSS, sindicato e salário líquido
+# salarioBruto = salarioPorHora * horasTrabalhadasPorMes
+# impostoRenda = salarioBruto * 0.11
+# if salarioBruto <= 900:
+#     impostoRenda = str('Isento de imposto de renda')
+# else:
+#     impostoRenda = float(salarioBruto * 0.11)
+# inss = salarioBruto * 0.08
+# sindicato = salarioBruto * 0.05
+# salarioLiquido = salarioBruto - inss - sindicato
+# if impostoRenda == 'Isento de imposto de renda':
+#     salarioLiquido = salarioBruto - inss - sindicato
+# else:
+#     salarioLiquido = salarioBruto - impostoRenda - inss - sindicato
+# # imprime os valores
+# print(f'\n + Salário Bruto: {str(salarioBruto)} '
+#       f'\n - IR (11%):  {str(impostoRenda)} '
+#       f'\n - INSS (8%): {str(inss)} '
+#       f'\n - Sindicato (5%): {str(sindicato):} '
+#       f'\n = Salário Líquido: {str(salarioLiquido)}')
+
+# Exercicios de Python 12
+# print('=== loja de tinta ===')
+# area = float(input('Digite a área a ser pintada em m²: '))
+# litros = area / 3
+# if litros < 18:
+#     litros = 18
+#     latas = 1
+# else:
+#     latas = litros / 18
+#     latas = int(latas + 1)
+# preco = latas * 80
+# print(f'Você precisará de {latas} latas de tinta.')
+# print(f'O preço total é R$ {preco:.2f}')
+
+# Exercicios de Python 13
+# print('===  ===')
+# area = float(input('Digite a área a ser pintada em m²: '))
+# litros = area / 3
+# if litros < 18:
+#      litros = 18
+#      latas = 1
+# else:
+#     latas = litros / 18
+#     latas = int(latas + 1)
+#  preco = latas * 80
+# print(f'Você precisará de {latas} latas de tinta.')
+# print(f'O preço total é R$ {preco:.2f}')
+
+# Exercicios de Python 14
+# print('=== pede-numero-e-mostra-o-maior ===')
+# numero1 = int(input('Digite um número: '))
+# numero2 = int(input('Digite outro número: '))
+# if numero1 > numero2:
+#     print(numero1)
+# else:
+#     print(numero2)
+
+# Exercicios de Python 15
+# print('=== positivo ou negativo? ===')
+# numero = int(input('Digite um número: '))
+# if numero > 0:
+#     print('Positivo')
+# else:
+#     print('Negativo')
+
+# Exercicios de Python 16 - muito parecido com um anterior
+print('=== folha de pagamento ===')
+#requisições de input
+salarioHora = float(input('Quanto você ganha por hora? '))
+horasTrabalhadas = float(input('Quantas horas você trabalhou esse mês? '))
+#calculos
+salarioBruto = salarioHora * horasTrabalhadas
+impostoRenda = 0
+if salarioBruto <= 900:
+        impostoRenda = str('Isento de imposto de renda')
+elif salarioBruto > 900 and salarioBruto <= 1500:
+        impostoRenda = salarioBruto * 0.05
+elif salarioBruto > 1500 and salarioBruto <= 2500:
+        impostoRenda = salarioBruto * 0.10
 else:
-        print('Peso dentro do limite permitido.')
+        impostoRenda = salarioBruto * 0.20
+fgts = salarioBruto * 0.11
+inss = salarioBruto * 0.10
+salarioLiquido = salarioBruto - inss + fgts
+if impostoRenda == 'Isento de imposto de renda':
+    salarioLiquido = salarioBruto - inss + fgts
+else:
+    salarioLiquido = salarioBruto - impostoRenda - inss + fgts
+#imprime os valores
+print(f'\n + Salário Bruto: {str(salarioBruto)} '
+      f'\n + FGTS (11%): {str(fgts)} '
+      f'\n - IR (5%, 10% ou 20%): {str(impostoRenda)} '
+      f'\n - INSS (10%): {str(inss)} '
+      f'\n = Salário Líquido: {str(salarioLiquido)}')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
