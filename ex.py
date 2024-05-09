@@ -225,23 +225,30 @@
 #     print('Os números são iguais.')
 
 # Exercicios de Python 18
-print('===  ===')
-def obter_numero():
-    while True:
-        numero = float(input('Digite um número: '))
-        if numero > 0:
-            return numero
-        else:
-            print('Por favor, digite um número maior que 0.')
-numero1 = obter_numero()
-numero2 = obter_numero()
-numero3 = obter_numero()
-if numero1 > numero2 and numero1 > numero3:
-    print(f'{numero1} é o maior número.')
-elif numero2 > numero1 and numero2 > numero3:
-    print(f'{numero2} é o maior número.')
-else:
-    print(f'{numero3} é o maior número.')
+# print('===  ===')
+# # função para obter um número maior que 0
+# def obter_numero():
+#     while True:
+#         numero = float(input('Digite um número: '))
+#         if numero > 0:
+#             return numero
+#         else:
+#             print('Por favor, digite um número maior que 0.')
+# # obtem os números
+# numero1 = obter_numero()
+# numero2 = obter_numero()
+# numero3 = obter_numero()
+# # verifica qual é o maior número
+# if numero1 > numero2 and numero1 > numero3:
+#     print(f'{numero1} é o maior número.')
+# elif numero2 > numero1 and numero2 > numero3:
+#     print(f'{numero2} é o maior número.')
+# else:
+#     print(f'{numero3} é o maior número.')
+
+# Exercicios de Python 19
+#print('===  ===')
+
 
 
 
